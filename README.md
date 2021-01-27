@@ -1,2 +1,2 @@
 # portfolio
-Esse é um repositório com o portfólio do desenvolvedor
+This is a repository created for the development of a portfolio.
