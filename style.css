@@ -48,12 +48,68 @@ header{
     width: 100%;
     height: 100%;
     object-fit: cover;
-    opacity: 0.5;
+    opacity: 0.2;
+    animation: zoom 5s;
+}
+@keyframes zoom{
+    0%{
+        transform: scale(1.8);
+    }
+    100%{
+        transform: scale(1);
+    }
 }
 
 #menu{
+    font-family: 'Playfair Display', 'Times New Roman', Times, serif;
     position: absolute;
     top: 0%;
     padding: 10px;
     width: 100%;
 } 
+#text-container{
+    position: absolute;
+    top: 30%;
+    padding: 30px;
+    left: 10%;
+    animation: moveBanner 2s;
+}
+@keyframes moveBanner{
+    0%{
+        transform: translateY(35rem)
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+#text-container h1{
+    font-size: 5em;
+    padding: 5px;
+    font-family: 'Playfair Display', 'Times New Roman', Times, serif;
+    text-shadow:1px 1px 1px rgba(0, 0, 0, 0.8);
+
+}
+#text-container p{
+    font-family: 'Roboto Mono', 'Times New Roman', Times, serif;
+    font-size: 1.5em;
+    padding: 5px;
+    margin-left: 0.5%;
+}
+#text-container button{
+    background: #000000;  
+    background: -webkit-linear-gradient(to right, #434343, #000000);  
+    background: linear-gradient(to right, #434343, #000000); 
+    color: white;
+    font-family: 'Roboto Mono', 'Times New Roman', Times, serif;
+    font-size: 1.5em;
+    padding: 0.5em 0.8em 0.5em 0.8em;
+    margin-top: 5%;
+    margin-left: 0.5%;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+#text-container button:hover{
+    opacity: 0.8;
+
+}
