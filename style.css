@@ -1,151 +1,148 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Roboto+Mono:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap');
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css');
+
+:root {
+  --header-height:6rem;
+
+  --hue-color: 202;
+  --first-color: hsl(var(--hue-color), 66%, 39%) ;
+  --first-color-second: hsl(var(--hue-color), 69%, 61%);
+  --first-color-alt: hsl(var(--hue-color), 57%, 53%);
+  --first-color-lighter: hsl(var(--hue-color), 92, 85);
+  --title-color: hsl(var(--hue-color), 8%, 15%);
+  --text-color: hsl(var(--hue-color), 8%, 45%);
+  --text-color-light: hsl(var(--hue-color), 8%, 65%);
+  --input-color: hsl(var(--hue-color), 70%, 96%);
+  --body-color: hsl(var(--hue-color), 60%, 99%);
+  --container-color: #FFF;
+
+  --title-font: 'Playfair Display', serif;
+  --body-font: 'Roboto Mono', 'Times New Roman', Times, serif;
+
+  --big-font-size: 2rem;
+  --h1-font-size: 1.5rem;
+  --h2-font-size: 1.25rem;
+  --h3-font-size: 1.125rem;
+  --normal-font-size: 0.938rem;
+  --small-font-size: 0.813rem;
+  --smaller-font-size: 0.75rem;
+
+  --font-medium: 500;
+  --font-semi-bold: 600;
+
+}
+@media screen and (min-width:968px) {
+  :root {
+    --big-font-size: 3rem;
+    --h1-font-size: 2.25rem;
+    --h2-font-size: 1.5rem;
+    --h3-font-size: 1.125rem;
+    --normal-font-size: 1rem;
+    --small-font-size: 0.875rem;
+    --smaller-font-size: 0.813rem;
+  }
+}
+
 *{
-    margin:0;
-    padding: 0;
+  box-sizing: border-box;
+  margin:0;
+  padding: 0;
 }
-header{
-    width: 100%;
-    height: 100vh;
-    overflow: hidden;
-    position: relative;
+html {
+  scroll-behavior: smooth;
 }
-#img-wrapper{
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
+body {
+  margin: 0 0 var(--header-height);
+  font-family: var(--body-font);
+  font-size: 1rem;
+  background-color: var(--body-color);
+  color: var(--text-color);
+  margin: 0 auto;
+  padding: 0 4rem;
 }
-#img-wrapper img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    opacity: 0.5;
-} 
-#header-top {
-    position: relative;
-    float: right;
-    padding: 5px;
-    right: 5%;
-    
+ul {
+  list-style: none;
 }
 
-#header-top a{
-    padding: 5px;
-    text-decoration: none;
-    font-size: 1.2em;
-    color: black;
+a {
+  text-decoration: none;
+  color: var(--text-color);
 }
-#header-top a:hover{
-    background-color: black;
-    color: white;
+img {
+  display: flex;
+  align-items: center;
 }
-#img-wrapper{
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
+.header {
+  height: var(--header-height);
+  width: 100%;
+  position: relative;
+  z-index: 50;
 }
-#img-wrapper img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    opacity: 0.2;
-    animation: zoom 5s;
+.nav_container {
+  justify-content: space-between;
+  display: flex;
+  max-width: 92rem;
 }
-@keyframes zoom{
-    0%{
-        transform: scale(1.8);
-    }
-    100%{
-        transform: scale(1);
-    }
+.nav_logo {
+  width: 80px;
+  display: flex;
+  align-items: center;
+}
+.nav_list {
+  display: flex;
+  align-items: center;
+}
+.nav_link {
+  display: inline-block;
+  padding: 10px;
+}
+.nav_link:hover {
+  cursor: pointer;
+  color: var(--first-color);
+}
+.presentation_container {
+  height: calc(100vh - 6rem);
+  display: grid;
+  grid-template-columns: 5% 45% 50%; 
+  align-items: center;
+  justify-content: center;
 }
 
-#menu{
-    font-family: 'Playfair Display', 'Times New Roman', Times, serif;
-    position: absolute;
-    top: 0%;
-    padding: 10px;
-    width: 100%;
-    background-color: white;
-    height: 5%;
-} 
-#text-container{
-    position: absolute;
-    top: 30%;
-    padding: 30px;
-    left: 10%;
-    animation: moveBanner 2s;
+.link_item  {
+  font-size: var(--normal-font-size);
 }
-#text-container a{
-    font-size: 1.5rem;
-    color:black;
-    margin-right: 0.5%;
-    margin-left: 1%;
-    text-decoration: none;
 
+.section_text h1 {
+  color: var(--title-color);
+  font-size: var(--h1-font-size);
+  line-height: 0.8;
+  font-family: var(--body-font);
 }
-@keyframes moveBanner{
-    0%{
-        transform: translateY(35rem)
-    }
-    100%{
-        transform: translateY(0);
-    }
-}
-#text-container h1{
-    font-size: 5em;
-    padding: 5px;
-    font-family: 'Playfair Display', 'Times New Roman', Times, serif;
-    text-shadow:1px 1px 1px rgba(0, 0, 0, 0.8);
 
+.section_text p {
+  line-height: 1.6rem;
+  font-size: var(--small-font-size);
 }
-#text-container p{
-    font-family: 'Roboto Mono', 'Times New Roman', Times, serif;
-    font-size: 1.5em;
-    padding: 5px;
-    margin-left: 0.5%;
-}
-#text-container button{
-    background: #000000;  
-    background: -webkit-linear-gradient(to right, #434343, #000000);  
-    background: linear-gradient(to right, #434343, #000000); 
-    color: white;
-    font-family: 'Roboto Mono', 'Times New Roman', Times, serif;
-    font-size: 1.5em;
-    padding: 0.5em 0.8em 0.5em 0.8em;
-    margin-top: 1%;
-    margin-left: 0.5%;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-#text-container button:hover{
-    opacity: 0.8;
 
+.presentation_container img {
+  max-width: 100%;
 }
-#skills-container{
-    width: 100%;
-    height: 100vh;
-    background: rgb(255, 255, 255);
+.presentation_container button {
+  font-family: var(--body-font);
+  font-size: var(--h3-font-size);
+  font-weight: var(--font-semi-bold);
+  color: var(--input-color);
+  box-shadow: 1px 1px var(--text-color-light);
+  margin-top: 1%;
+  border-radius: 2rem;
+  padding: 2%;
+  border: none;
+  background-color: var(--first-color);
+  transition: 0.3s;
 }
-#section-header{
-    font-size: 2.5em;
-    font-family: 'Playfair Display', 'Times New Roman', Times, serif;
-    border-bottom: black solid 3px;
-    width: 33.33%;
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-}
-.section-skill{
-    float: left;
-    background-color: black;
-    width: 28.5%;
-    height: 50%;
-    border: white solid 3px;
-    margin: 2%;
-}
-.image-skill{
-    text-align: center;
+
+.presentation_container button:hover {
+  background-color: var(--first-color-alt);
+  cursor: pointer;
 }
