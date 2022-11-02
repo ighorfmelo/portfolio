@@ -20,10 +20,9 @@
       <div class="nav_menu" id=nav-menu>
         <ul class="nav_list">
           <li><a href="#home" class="nav_link"><i class="uil uil-estate"></i>Home</a></li>
-          <li><a href="#user" class="nav_link"><i class="uil uil-user"></i>Sobre</a></li>
-          <li><a href="#skills" class="nav_link"><i class="uil uil-clipboard-notes"></i>Skills</a></li>
-          <li><a href="#portfolio" class="nav_link"><i class="uil uil-mountains-sun"></i>Portfolio</a></li>
-          <li><a href="#contact" class="nav_link"><i class="uil uil-comment-alt-message"></i>Contato</a></li>
+          <li><a href="#about" class="nav_link"><i class="uil uil-user"></i>About</a></li>
+          <li><a href="#works" class="nav_link"><i class="uil uil-mountains-sun"></i>Works</a></li>
+          <li><a href="#projects" class="nav_link"><i class="uil uil-comment-alt-message"></i>Projects</a></li>
         </ul>
       </div>
       </div>
@@ -40,15 +39,15 @@
       </div>
       <div class="section_text">
         <h1>Olá, eu sou o Ighor</h1>
-        <p>Desenvolvedor Front-end Junior</p>
+        <p>Desenvolvedor Front-end</p>
         <button>Download do Currículo</button>
       </div>
       <img src="images/Fundo.png" alt="">
     </section>
   </div>
   <div class="about-section">
-    <div class="about">
-      <img src="images/Ighor.jpg" alt="">
+    <div class="about" id="about">
+      <img src="images/ighor.jpg" class="about-photo" alt="">
       <div>
         <div class="about-title">
           <h1>Deixa</h1>
@@ -66,24 +65,49 @@
           </li>
           <li><strong>Trabalho:</strong> 4 meses trabalhando como desenvolvedor junior na empresa Uol-edtech.</li>
           <li><strong>Estudando:</strong> Cursando Engenharia de Informação da UFABC (Universidade Federal do ABC).</li>
+          <div class="skills">
+            <div class="skill-card"><img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/html/html.png" alt="html"></div>
+            <div class="skill-card"><img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/css/css.png" alt="css"></div>
+            <div class="skill-card"><img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/javascript/javascript.png" alt="javascript"></div>
+            <div class="skill-card"><img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/vue/vue.png" alt="vuejs"></div>
+          </div>
         </ul>
       </div>
     </div>
   </div>
-  <div class="skills-section">
-    <div class="skills">
-      <div><img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/html/html.png" alt="html"></div>
-      <div><img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/css/css.png" alt="css"></div>
-      <div><img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/javascript/javascript.png" alt="javascript"></div>
-      <div><img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/vue/vue.png" alt="vuejs"></div>
-      <div><img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/ruby/ruby.png" alt="ruby"></div>
-    </div> 
-    <div class="skills-text">
-      <h1>Skills</h1>
-      <p>Eu iniciei essa aventura como desenvolvedor Front-end estudando as tecnologias básicas necessárias (HTML, CSS e Javascript). Porém, chegou aquele momento de escolher em qual tecnologia eu ia me aprofundar.</p>
-      <p>Explorei um pouco do React, mas conversando com outros desenvolvedores decidi seguir estudando VueJs, uma tecnologia com excelente documentação e que já erá utilizada na empresa que trabalhava.</p>
-      <p>Trabalhei por alguns meses em um time onde a demanda por front-end era menor do que para back-end, por isso decidi começar a estudar ruby&rails no meu tempo livre.</p>
-      <p>Atualmente, sigo me aprofundando em VueJs e pretendo conseguir um conhecimento básico de tecnologias do back-end.</p>
+  <div class="work-section" id="works">
+    <h1>Experience</h1>
+    <ul class="work-menu"></ul>
+    <div class="work-description"></div>
+  </div>
+  <div class="projects-section" id="projects">
+    <h1>Projects</h1>
+    <p>Nesta área você encontrará os projetos desenvolvidos</p>
+    <div class="projects-done">
+      <div class="project-card">
+        <div class="project-image">
+          <span class="warning">Em Desenvolvimento</span>
+        </div>
+        <h2>Título</h2>
+        <p>Descrição do conteúdo</p>
+        <a href="https://github.com/ighorfmelo" target="_blank"><i class="uil uil-github-alt"></i></a>
+      </div>
+      <div class="project-card">
+        <div class="project-image">
+          <span class="warning">Em Desenvolvimento</span>
+        </div>
+        <h2>Título</h2>
+        <p>Descrição do conteúdo</p>
+        <a href="https://github.com/ighorfmelo" target="_blank"><i class="uil uil-github-alt"></i></a>
+      </div>
+      <div class="project-card">
+        <div class="project-image">
+          <span class="warning">Em Desenvolvimento</span>
+        </div>
+        <h2>Título</h2>
+        <p>Descrição do conteúdo</p>
+        <a href="https://github.com/ighorfmelo" target="_blank"><i class="uil uil-github-alt"></i></a>
+      </div>
     </div>
   </div>
   <script src="script.js"></script>
