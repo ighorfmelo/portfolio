@@ -245,6 +245,11 @@ h1 {
   font-weight: 500;
 }
 
+.disabled {
+  background: var(--first-color-alt) !important;
+  pointer-events: none;
+}
+
 .work-menu li:hover {
   background: var(--first-color-alt);
 }
@@ -255,7 +260,33 @@ h1 {
   box-sizing: border-box;
   border: 2px solid var(--first-color);
   border-radius: 2rem;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  padding: 20px;
   border-left: 30px solid var(--first-color);
+}
+
+.company-name {
+  font-size: var(--h1-font-size);
+  color: var(--first-color);
+  font-weight: bold;
+}
+
+.company-interval {
+  font-size: var(--small-font-size);
+}
+
+.work-informations {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.company-role {
+  font-size: var(--h3-font-size);
+  font-weight: 600;
 }
 
 .projects-section {
