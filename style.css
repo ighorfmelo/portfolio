@@ -306,7 +306,8 @@ h1 {
 .project-card {
   border: 2px solid;
   border-radius: 2rem;
-  height: 230px;
+  min-height: 230px;
+  padding: 10px 0;
 }
 
 .project-image {
@@ -318,9 +319,14 @@ h1 {
   background: var(--first-color-alt);
   width: 320px;
   height: 120px;
+  overflow: hidden;
 }
 
-.project-card:hover {
+.project-image img {
+  width: 100%;
+}
+
+.doing:hover {
   opacity: 0.6;
 }
 
