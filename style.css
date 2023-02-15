@@ -200,23 +200,9 @@ h1 {
   padding-top: 18px;
 }
 
-.skills div img{
+.skills img{
   width: 35px;
   margin-right: 20px;
-}
-
-.skills-text {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.skills-text h1 {
-  padding-bottom: 15px;
-}
-
-.skills-text p {
-  text-align: justify;
 }
 
 .work-section {
@@ -255,8 +241,7 @@ h1 {
 }
 
 .work-description {
-  width: 70%;
-  height: 400px;
+  min-height: 400px;
   box-sizing: border-box;
   border: 2px solid var(--first-color);
   border-radius: 2rem;
@@ -294,7 +279,6 @@ h1 {
   flex-direction: column;
   gap:20px;
   width: 100%;
-  height: 100vh;
   padding: 5%;
   text-align: center;
 }
@@ -343,6 +327,78 @@ h1 {
   font-weight: 600;
   color: white;
   font-size: var(--h3-font-size);
+}
+
+@media only screen and (max-width: 1500px) {
+  .about {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .about-title {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+
+  .about-photo {
+    margin: 0;
+  }
+
+  .skills {
+    justify-content: center;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .projects-done {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .project-card {
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+    align-items: center;
+  }
+}
+
+
+@media only screen and (max-width: 770px) {
+  .presentation_container {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    flex-direction: column-reverse;
+  }
+
+  .link_menu  ul{
+    margin-top: 12px;
+    display: flex;
+    gap: 14px;
+  }
+
+  .section_text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about-photo {
+    width: 300px;
+  }
+
+  .project-card {
+    width: 300px;
+  }
+
+  .project-image {
+    width: 270px;
+  }
 }
 
 
