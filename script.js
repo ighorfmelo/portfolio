@@ -2,24 +2,45 @@ const experience = {
     companys: [
         {
             name: 'UOL EdTech',
-            role: 'Analista de Desenvolvimento Junior',
+            role: 'Junior Software Developer',
             start_date: '10/2021',
             end_date: null,
-            description: 'Responsável pela implementação de novas funcionalidades e telas na plataforma de educação corporativa da empresa utilizando testes automatizados. Essas funcionalidades deveriam ser implementadas pixel perfect e de maneira responsiva.',
-            technologies: ['VueJs', 'Javascript', 'Git', 'Jest'],
+            description: 'I worked on implementing different features in the learning management system using the Vue.Js/Nuxt architecture. All of them using pixel perfect design, unit testing, and responsiveness.',
+            technologies: ['VueJs', 'Nuxt', 'Javascript', 'Git', 'Jest'],
             icon: '',
         },
         {
             name: 'Skore',
-            role: 'Estagiário',
+            role: 'Intern',
             start_date: '12/2019',
             end_date: '09/2021',
-            description: 'Responsável pela resolução de problemas no Front-end e Back-end em uma plataforma de educação corporativa.',
+            description: 'I worked on troubleshooting the Backend and Frontend of the platform in order to improve the customer experience.',
             technologies: ['Ruby', 'Javascript', 'VueJs', 'Git'],
             icon: '',
         }
     ]
 }
+
+const colorButton = document.querySelector('.nav_color')
+const icon = colorButton.querySelector('i')
+const root = document.documentElement
+
+colorButton.addEventListener('click', () => {
+    if (icon.classList.contains('uil-moon')) {
+        root.style.setProperty('--background-color', 'black')
+        root.style.setProperty('--title-color', 'white')
+        root.style.setProperty('--text-color', 'white')
+        icon.classList.remove("uil-moon")
+        icon.classList.add("uil-sun")
+    }
+    else {
+        root.style.setProperty('--background-color', 'rgba(255, 255, 255, 0.8)')
+        root.style.setProperty('--title-color', 'hsl(var(--hue-color), 8%, 15%)')
+        root.style.setProperty('--text-color', 'hsl(var(--hue-color), 8%, 45%)')
+        icon.classList.remove("uil-sun")
+        icon.classList.add("uil-moon")
+    }
+})
 
 const menu = document.querySelector('.work-menu')
 const workDescription = document.querySelector('.work-description')
